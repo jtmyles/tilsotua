@@ -48,7 +48,8 @@ def generate_object_cat(obj_file:str, file1:str, xy_map:Table,
     # Read in tables
     #objcols = ['Name', 'prior', 'Mag', '']
     objects = Table.read(obj_file, format="ascii")
-    objects.rename_column('col1', 'Name')
+    print(objects)
+    #objects.rename_column('col1', 'Name')
     file1_tab = Table.read(file1, format="ascii.commented_header", header_start=62)
     file1_tab['index'] = np.arange(len(file1_tab))
 
